@@ -49,9 +49,28 @@ extension NSDate {
             return NSString(format: "%i sec", -1 * Int(self.timeIntervalSinceNow))
         } else if -1 * self.timeIntervalSinceNow < 60 * 60 {
             return NSString(format: "%i min", -1 * Int(self.timeIntervalSinceNow) / 60)
+        } else if self.isToday() {
+            return NSString(format: "%i hr", -1 * Int(self.timeIntervalSinceNow) / 3600)
         }
         
         return self.toHumanReadableString()
+    }
+    
+    func isToday() -> Bool {
+        // Create a date for 00:00:00 today
+        let gregorianCalendar: NSCalendar = NSCalendar(calendarIdentifier: NSGregorianCalendar)!
+        var dateComponents: NSDateComponents = gregorianCalendar.components((NSCalendarUnit.CalendarCalendarUnit | NSCalendarUnit.CalendarUnitMonth | NSCalendarUnit.CalendarUnitDay), fromDate: NSDate())
+        dateComponents.hour = 0
+        dateComponents.minute = 0
+        dateComponents.second = 0
+        let today: NSDate = gregorianCalendar.dateFromComponents(dateComponents)!
+        
+        // Compare this date to the date for today
+        if self.timeIntervalSince1970 > today.timeIntervalSince1970 {
+            return true
+        } else {
+            return false
+        }
     }
     
     

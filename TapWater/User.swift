@@ -47,5 +47,29 @@ class User: NSManagedObject {
             return user
         }
     }
+    
+    func drinksToday() -> Int {
+        // Load the users drinks from today
+        let drinks: [Drink] = Drink.drinksForUser(User.currentUser()).filter({ (drink: Drink) -> Bool in
+            return drink.drinkDate.isToday()
+        })
+        
+        // Return the number of drinks in the array
+        return drinks.count
+    }
+    
+    func lastDrinkDate() -> NSDate? {
+        // Load the user's drinks
+        let drinks: [Drink] = Drink.drinksForUser(User.currentUser()).filter({ (drink: Drink) -> Bool in
+            return drink.drinkDate.isToday()
+        })
+        
+        // Return the most recent drink
+        if drinks.count > 0 {
+            return drinks[0].drinkDate
+        } else {
+            return nil
+        }
+    }
 
 }
