@@ -17,6 +17,11 @@ class DrinkHistoryViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController!.navigationBar.translucent = false;
+        
+        // Enable refresh on the table view
+        self.refreshControl = UIRefreshControl()
+        self.refreshControl!.tintColor = UIColor.TWLightGreyColor()
+        self.refreshControl!.addTarget(self, action: Selector("reloadDrinks"), forControlEvents: UIControlEvents.ValueChanged)
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -62,5 +67,9 @@ class DrinkHistoryViewController: UITableViewController {
         cell.detailTextLabel!.text = drink.drinkDate.toHumanReadableIntervalString()
         
         return cell
+    }
+    
+    func reloadDrinks() {
+        self.refreshControl!.endRefreshing()
     }
 }
