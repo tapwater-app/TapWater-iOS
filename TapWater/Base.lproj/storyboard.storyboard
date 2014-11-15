@@ -1,266 +1,75 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="nbJ-ew-LUD">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="q2B-jC-q7o">
     <dependencies>
-        <deployment defaultVersion="1792" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
-        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="dWh-b3-F80">
-            <objects>
-                <viewController id="RaI-FT-dcC" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="IUw-eV-e8U"/>
-                        <viewControllerLayoutGuide type="bottom" id="skI-AK-Re0"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Xni-SM-zgW">
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="JRH-Kb-ywA" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="708" y="-481.5"/>
-        </scene>
         <!--TapWater-->
         <scene sceneID="vlT-9B-W3l">
             <objects>
                 <viewController id="x2f-pU-E3L" customClass="NewDrinkViewController" customModule="TapWater" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="aAR-gh-OBa"/>
-                        <viewControllerLayoutGuide type="bottom" id="FsE-9B-HGA"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Kue-Kg-mFW">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rle-ic-ESd">
-                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Rle-ic-ESd">
+                                <rect key="frame" x="207" y="79" width="97" height="27"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="298" y="40" width="86" height="27"/>
-                                </variation>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Today: 00 Cups" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="go7-TH-Ruh">
-                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Today: 00 Cups" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="go7-TH-Ruh">
+                                <rect key="frame" x="16" y="79" width="173" height="27"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="16" y="40" width="151" height="27"/>
-                                </variation>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w0e-qU-3C6">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="opu-xf-B8T">
-                                        <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                        <color key="backgroundColor" red="0.13333333333333333" green="0.65490196078431373" blue="0.94117647058823528" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="dyA-2T-bCM">
-                                                <variation key="heightClass=regular-widthClass=compact" constant="60"/>
-                                            </constraint>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
-                                        <state key="normal" title="Drink (4oz.)">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <variation key="default">
-                                            <mask key="constraints">
-                                                <exclude reference="dyA-2T-bCM"/>
-                                            </mask>
-                                        </variation>
-                                        <variation key="heightClass=regular-widthClass=compact">
-                                            <mask key="constraints">
-                                                <include reference="dyA-2T-bCM"/>
-                                            </mask>
-                                        </variation>
-                                        <connections>
-                                            <action selector="newDrinkButtonTapped:" destination="x2f-pU-E3L" eventType="touchUpInside" id="5ny-qm-W0F"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cvT-AQ-cD3">
-                                        <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                        <color key="backgroundColor" red="0.1333333333" green="0.65490196079999996" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="kIq-sL-7C4">
-                                                <variation key="heightClass=regular-widthClass=compact" constant="60"/>
-                                            </constraint>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
-                                        <state key="normal" title="Glass (8oz.)">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <variation key="default">
-                                            <mask key="constraints">
-                                                <exclude reference="kIq-sL-7C4"/>
-                                            </mask>
-                                        </variation>
-                                        <variation key="heightClass=regular-widthClass=compact">
-                                            <mask key="constraints">
-                                                <include reference="kIq-sL-7C4"/>
-                                            </mask>
-                                        </variation>
-                                        <connections>
-                                            <action selector="newDrinkButtonTapped:" destination="x2f-pU-E3L" eventType="touchUpInside" id="6FH-f6-qM1"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v2G-RI-qZ9">
-                                        <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                        <color key="backgroundColor" red="0.1333333333" green="0.65490196079999996" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="8bw-jj-Oyl"/>
-                                            <constraint firstAttribute="height" constant="60" id="vZ1-5M-FNK"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
-                                        <state key="normal" title="Bottle (16oz.)">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <variation key="default">
-                                            <mask key="constraints">
-                                                <exclude reference="8bw-jj-Oyl"/>
-                                                <exclude reference="vZ1-5M-FNK"/>
-                                            </mask>
-                                        </variation>
-                                        <variation key="heightClass=regular-widthClass=compact">
-                                            <mask key="constraints">
-                                                <exclude reference="8bw-jj-Oyl"/>
-                                                <include reference="vZ1-5M-FNK"/>
-                                            </mask>
-                                        </variation>
-                                        <connections>
-                                            <action selector="newDrinkButtonTapped:" destination="x2f-pU-E3L" eventType="touchUpInside" id="PJC-S0-40P"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="cvT-AQ-cD3" firstAttribute="leading" secondItem="w0e-qU-3C6" secondAttribute="leading" id="0da-Ep-WtR"/>
-                                    <constraint firstAttribute="trailing" secondItem="opu-xf-B8T" secondAttribute="trailing" id="0gI-6U-kt2"/>
-                                    <constraint firstItem="v2G-RI-qZ9" firstAttribute="top" secondItem="cvT-AQ-cD3" secondAttribute="bottom" constant="20" id="5Yb-3a-jGb"/>
-                                    <constraint firstItem="v2G-RI-qZ9" firstAttribute="leading" secondItem="w0e-qU-3C6" secondAttribute="leading" id="5ly-tX-IVt"/>
-                                    <constraint firstItem="opu-xf-B8T" firstAttribute="top" secondItem="w0e-qU-3C6" secondAttribute="top" id="8v4-3R-gkk"/>
-                                    <constraint firstAttribute="trailing" secondItem="cvT-AQ-cD3" secondAttribute="trailing" id="LPP-v0-4pd"/>
-                                    <constraint firstAttribute="bottom" secondItem="v2G-RI-qZ9" secondAttribute="bottom" id="YAd-4T-HEH"/>
-                                    <constraint firstItem="opu-xf-B8T" firstAttribute="leading" secondItem="w0e-qU-3C6" secondAttribute="leading" id="jSs-qo-dR1"/>
-                                    <constraint firstItem="cvT-AQ-cD3" firstAttribute="top" secondItem="opu-xf-B8T" secondAttribute="bottom" constant="20" id="kRj-SR-gaT"/>
-                                    <constraint firstItem="cvT-AQ-cD3" firstAttribute="top" secondItem="opu-xf-B8T" secondAttribute="bottom" constant="20" id="pwk-gO-JBd"/>
-                                    <constraint firstItem="v2G-RI-qZ9" firstAttribute="top" secondItem="cvT-AQ-cD3" secondAttribute="bottom" constant="20" id="q2O-vj-CuJ"/>
-                                    <constraint firstAttribute="trailing" secondItem="v2G-RI-qZ9" secondAttribute="trailing" id="wJn-fb-uTs"/>
-                                </constraints>
-                                <variation key="default">
-                                    <mask key="subviews">
-                                        <exclude reference="opu-xf-B8T"/>
-                                        <exclude reference="cvT-AQ-cD3"/>
-                                        <exclude reference="v2G-RI-qZ9"/>
-                                    </mask>
-                                    <mask key="constraints">
-                                        <exclude reference="0da-Ep-WtR"/>
-                                        <exclude reference="LPP-v0-4pd"/>
-                                        <exclude reference="kRj-SR-gaT"/>
-                                        <exclude reference="pwk-gO-JBd"/>
-                                        <exclude reference="0gI-6U-kt2"/>
-                                        <exclude reference="8v4-3R-gkk"/>
-                                        <exclude reference="jSs-qo-dR1"/>
-                                        <exclude reference="5Yb-3a-jGb"/>
-                                        <exclude reference="5ly-tX-IVt"/>
-                                        <exclude reference="YAd-4T-HEH"/>
-                                        <exclude reference="q2O-vj-CuJ"/>
-                                        <exclude reference="wJn-fb-uTs"/>
-                                    </mask>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="16" y="87" width="368" height="220"/>
-                                    <mask key="subviews">
-                                        <include reference="opu-xf-B8T"/>
-                                        <include reference="cvT-AQ-cD3"/>
-                                        <include reference="v2G-RI-qZ9"/>
-                                    </mask>
-                                    <mask key="constraints">
-                                        <include reference="0da-Ep-WtR"/>
-                                        <include reference="LPP-v0-4pd"/>
-                                        <include reference="kRj-SR-gaT"/>
-                                        <include reference="pwk-gO-JBd"/>
-                                        <include reference="0gI-6U-kt2"/>
-                                        <include reference="8v4-3R-gkk"/>
-                                        <include reference="jSs-qo-dR1"/>
-                                        <include reference="5Yb-3a-jGb"/>
-                                        <include reference="5ly-tX-IVt"/>
-                                        <include reference="YAd-4T-HEH"/>
-                                        <include reference="q2O-vj-CuJ"/>
-                                        <include reference="wJn-fb-uTs"/>
-                                    </mask>
-                                </variation>
-                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="v2G-RI-qZ9">
+                                <rect key="frame" x="16" y="301" width="288" height="70"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.1333333333" green="0.65490196079999996" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <state key="normal" title="Bottle (16oz.)">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="newDrinkButtonTapped:" destination="x2f-pU-E3L" eventType="touchUpInside" id="PJC-S0-40P"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="cvT-AQ-cD3">
+                                <rect key="frame" x="16" y="211" width="288" height="70"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.1333333333" green="0.65490196079999996" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <state key="normal" title="Glass (8oz.)">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="newDrinkButtonTapped:" destination="x2f-pU-E3L" eventType="touchUpInside" id="6FH-f6-qM1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="opu-xf-B8T">
+                                <rect key="frame" x="16" y="121" width="288" height="70"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.13333333333333333" green="0.65490196078431373" blue="0.94117647058823528" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <state key="normal" title="Drink (4oz.)">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="newDrinkButtonTapped:" destination="x2f-pU-E3L" eventType="touchUpInside" id="5ny-qm-W0F"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="Rle-ic-ESd" firstAttribute="top" secondItem="aAR-gh-OBa" secondAttribute="bottom" constant="20" id="2B7-y8-Tot"/>
-                            <constraint firstItem="go7-TH-Ruh" firstAttribute="top" secondItem="aAR-gh-OBa" secondAttribute="bottom" constant="20" id="W7W-lm-ijP"/>
-                            <constraint firstItem="w0e-qU-3C6" firstAttribute="top" secondItem="go7-TH-Ruh" secondAttribute="bottom" constant="16" id="cYG-hN-pYQ"/>
-                            <constraint firstItem="Rle-ic-ESd" firstAttribute="trailing" secondItem="Kue-Kg-mFW" secondAttribute="trailingMargin" id="cfb-Zw-Qjs"/>
-                            <constraint firstItem="w0e-qU-3C6" firstAttribute="leading" secondItem="Kue-Kg-mFW" secondAttribute="leadingMargin" id="rqh-ft-Ezr">
-                                <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
-                            </constraint>
-                            <constraint firstAttribute="trailingMargin" secondItem="w0e-qU-3C6" secondAttribute="trailing" id="uNL-L3-rXQ"/>
-                            <constraint firstItem="w0e-qU-3C6" firstAttribute="top" secondItem="go7-TH-Ruh" secondAttribute="bottom" constant="8" id="vbr-L7-QMX">
-                                <variation key="heightClass=regular-widthClass=compact" constant="20"/>
-                            </constraint>
-                            <constraint firstItem="go7-TH-Ruh" firstAttribute="leading" secondItem="Kue-Kg-mFW" secondAttribute="leadingMargin" id="wGA-I5-Zhk"/>
-                        </constraints>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="Rle-ic-ESd"/>
-                                <exclude reference="go7-TH-Ruh"/>
-                                <exclude reference="w0e-qU-3C6"/>
-                            </mask>
-                            <mask key="constraints">
-                                <exclude reference="2B7-y8-Tot"/>
-                                <exclude reference="cfb-Zw-Qjs"/>
-                                <exclude reference="W7W-lm-ijP"/>
-                                <exclude reference="wGA-I5-Zhk"/>
-                                <exclude reference="cYG-hN-pYQ"/>
-                                <exclude reference="rqh-ft-Ezr"/>
-                                <exclude reference="uNL-L3-rXQ"/>
-                                <exclude reference="vbr-L7-QMX"/>
-                            </mask>
-                        </variation>
-                        <variation key="heightClass=regular-widthClass=compact">
-                            <mask key="subviews">
-                                <include reference="Rle-ic-ESd"/>
-                                <include reference="go7-TH-Ruh"/>
-                                <include reference="w0e-qU-3C6"/>
-                            </mask>
-                            <mask key="constraints">
-                                <include reference="2B7-y8-Tot"/>
-                                <include reference="cfb-Zw-Qjs"/>
-                                <include reference="W7W-lm-ijP"/>
-                                <include reference="wGA-I5-Zhk"/>
-                                <exclude reference="cYG-hN-pYQ"/>
-                                <include reference="rqh-ft-Ezr"/>
-                                <include reference="uNL-L3-rXQ"/>
-                                <include reference="vbr-L7-QMX"/>
-                            </mask>
-                        </variation>
                     </view>
-                    <navigationItem key="navigationItem" title="TapWater" id="23M-9B-KR8">
-                        <barButtonItem key="leftBarButtonItem" title="Profile" style="plain" id="GJe-JJ-WrZ">
-                            <connections>
-                                <segue destination="RaI-FT-dcC" kind="presentation" id="gYG-da-Kvj"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="bookmarks" id="ENC-4d-wAT">
-                            <connections>
-                                <segue destination="Byj-X5-kHl" kind="show" id="zPd-Bg-PSO"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="TapWater" id="23M-9B-KR8"/>
                     <connections>
                         <outlet property="bottleButton" destination="v2G-RI-qZ9" id="gHc-xR-LWJ"/>
                         <outlet property="drinkButton" destination="opu-xf-B8T" id="lXv-sP-yWP"/>
@@ -269,14 +78,31 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BWl-gj-Crh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="708" y="247.5"/>
+            <point key="canvasLocation" x="377" y="234"/>
+        </scene>
+        <!--History-->
+        <scene sceneID="qbj-I0-Yvh">
+            <objects>
+                <navigationController id="l23-af-LTk" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="History" id="C1m-CC-LfS"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="nbF-Ch-yzH">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Byj-X5-kHl" kind="relationship" relationship="rootViewController" id="TfZ-Xt-tCR"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kkA-Z0-hSc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-76" y="930"/>
         </scene>
         <!--History-->
         <scene sceneID="UEt-Jk-19f">
             <objects>
                 <tableViewController title="History" id="Byj-X5-kHl" customClass="DrinkHistoryViewController" customModule="TapWater" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" sectionHeaderHeight="22" sectionFooterHeight="22" id="V8R-Zj-yYJ">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -287,21 +113,15 @@
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="b1q-kW-hN5">
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
-                                            <variation key="heightClass=regular-widthClass=compact">
-                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                            </variation>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="8iy-TN-0FO">
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                             <color key="textColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
-                                            <variation key="heightClass=regular-widthClass=compact">
-                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                            </variation>
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
@@ -316,12 +136,13 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cJQ-qM-nTv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1617" y="247.5"/>
+            <point key="canvasLocation" x="377" y="930"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--TapWater-->
         <scene sceneID="mw4-0Q-b8b">
             <objects>
                 <navigationController id="nbJ-ew-LUD" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="TapWater" id="Lhu-JD-hmo"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="jAX-cD-PXS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -332,7 +153,31 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8wT-yJ-4Yh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-141" y="247.5"/>
+            <point key="canvasLocation" x="-75.200000000000003" y="234.30000000000001"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="VhY-zr-yjO">
+            <objects>
+                <tabBarController id="q2B-jC-q7o" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="I2l-ZI-cA2">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="nbJ-ew-LUD" kind="relationship" relationship="viewControllers" id="Idb-uU-R3s"/>
+                        <segue destination="l23-af-LTk" kind="relationship" relationship="viewControllers" id="YIr-lI-AXN"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gcm-jz-54X" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-536" y="234"/>
         </scene>
     </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
 </document>

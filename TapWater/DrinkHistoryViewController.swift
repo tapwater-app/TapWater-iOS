@@ -10,9 +10,20 @@ import UIKit
 
 class DrinkHistoryViewController: UITableViewController {
     
+    var drinks: [Drink] {
+        return Drink.drinksForUser(User.currentUser())
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController!.navigationBar.translucent = false;
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        // Refresh the tableview
+        self.tableView.reloadData()
     }
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -20,46 +31,35 @@ class DrinkHistoryViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 7;
+        return drinks.count;
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell : UITableViewCell = tableView.dequeueReusableCellWithIdentifier("DrinkCell", forIndexPath: indexPath) as UITableViewCell
+        // Dequeue a TableViewCell
+        var cell : UITableViewCell! = tableView.dequeueReusableCellWithIdentifier("DrinkCell", forIndexPath: indexPath) as UITableViewCell
         
-        switch indexPath.row {
-        case 0:
-            cell.textLabel!.text = "4oz Drink"
-            cell.detailTextLabel!.text = "10 minutes ago"
-            break
-        case 1:
-            cell.textLabel!.text = "4oz Drink"
-            cell.detailTextLabel!.text = "2 hours ago"
-            break
-        case 2:
-            cell.textLabel!.text = "8oz Glass"
-            cell.detailTextLabel!.text = "5 hourse ago"
-            break
-        case 3:
-            cell.textLabel!.text = "4oz Drink"
-            cell.detailTextLabel!.text = "Yesterday"
-            break
-        case 4:
-            cell.textLabel!.text = "16oz Bottle"
-            cell.detailTextLabel!.text = "Yesterday"
-            break
-        case 5:
-            cell.textLabel!.text = "8oz Glass"
-            cell.detailTextLabel!.text = "Yesterday"
-            break
-        case 6:
-            cell.textLabel!.text = "4oz Drink"
-            cell.detailTextLabel!.text = "2 days ago"
-            break
-        default:
-            cell.textLabel!.text = "4oz Drink"
-            cell.detailTextLabel!.text = "2 days ago"
-            break
+        // Manually load the cell the cell if it is not loaded properly
+        if cell == nil {
+            cell = UITableViewCell(style: UITableViewCellStyle.Value1, reuseIdentifier: "DrinkCell")
         }
+        
+        // Find the drink
+        let drink: Drink = self.drinks[indexPath.row]
+        
+        // Wrtie the drink category to the cell
+        switch drink.category {
+        case DrinkCategory.Drink.rawValue:
+            cell.textLabel.text = "Drink"
+        case DrinkCategory.Glass.rawValue:
+            cell.textLabel.text = "Glass"
+        case DrinkCategory.Bottle.rawValue:
+            cell.textLabel.text = "Bottle"
+        default:
+            cell.textLabel.text = "A Drink"
+        }
+        
+        // write the drink date to the cell
+        cell.detailTextLabel!.text = drink.drinkDate.toHumanReadableIntervalString()
         
         return cell
     }

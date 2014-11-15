@@ -24,14 +24,12 @@ class NewDrinkViewController: UIViewController {
     }
     
     @IBAction func newDrinkButtonTapped(sender : UIButton) {
-        println("Button Tapped! \(sender)")
-        
         if (sender == self.drinkButton) {
-            println("New 4oz Drink")
+            Drink.newDrink()
         } else if (sender == self.glassButton) {
-            println("New 8oz Drink")
+            Drink.newGlass()
         } else if (sender == self.bottleButton) {
-            println("New 16oz Drink")
+            Drink.newBottle()
         }
     }
     

@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		AB1A127C19C26D110054CBE7 /* NewDrinkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1A127B19C26D110054CBE7 /* NewDrinkViewController.swift */; };
 		AB1A127E19C273D00054CBE7 /* DrinkHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1A127D19C273CF0054CBE7 /* DrinkHistoryViewController.swift */; };
+		AB1C9E2C1A17FE04005EF383 /* DateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1C9E2B1A17FE04005EF383 /* DateExtensions.swift */; };
+		AB7CEFB71A0BFC730059E150 /* CoreDataExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7CEFB61A0BFC730059E150 /* CoreDataExtensions.swift */; };
+		AB7CEFBD1A0C00880059E150 /* Drink.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7CEFBC1A0C00880059E150 /* Drink.swift */; };
+		AB7CEFBF1A0C00890059E150 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7CEFBE1A0C00890059E150 /* User.swift */; };
 		AB8D021F19B0DF47007C55D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8D021E19B0DF47007C55D3 /* AppDelegate.swift */; };
 		AB8D022219B0DF47007C55D3 /* TapWater.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AB8D022019B0DF47007C55D3 /* TapWater.xcdatamodeld */; };
 		AB8D022719B0DF47007C55D3 /* storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB8D022519B0DF47007C55D3 /* storyboard.storyboard */; };
@@ -34,6 +38,10 @@
 /* Begin PBXFileReference section */
 		AB1A127B19C26D110054CBE7 /* NewDrinkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewDrinkViewController.swift; sourceTree = "<group>"; };
 		AB1A127D19C273CF0054CBE7 /* DrinkHistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrinkHistoryViewController.swift; sourceTree = "<group>"; };
+		AB1C9E2B1A17FE04005EF383 /* DateExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateExtensions.swift; sourceTree = "<group>"; };
+		AB7CEFB61A0BFC730059E150 /* CoreDataExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataExtensions.swift; sourceTree = "<group>"; };
+		AB7CEFBC1A0C00880059E150 /* Drink.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Drink.swift; sourceTree = "<group>"; };
+		AB7CEFBE1A0C00890059E150 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		AB8D021919B0DF47007C55D3 /* TapWater.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TapWater.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB8D021D19B0DF47007C55D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AB8D021E19B0DF47007C55D3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -68,6 +76,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AB7CEFB51A0BFC4E0059E150 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				AB7CEFB61A0BFC730059E150 /* CoreDataExtensions.swift */,
+				AB1C9E2B1A17FE04005EF383 /* DateExtensions.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
 		AB8D021019B0DF47007C55D3 = {
 			isa = PBXGroup;
 			children = (
@@ -91,6 +108,7 @@
 			children = (
 				AB8D021E19B0DF47007C55D3 /* AppDelegate.swift */,
 				AB8D024419B0E3CE007C55D3 /* Declarations */,
+				AB7CEFB51A0BFC4E0059E150 /* Extensions */,
 				AB8D023E19B0DF65007C55D3 /* Models */,
 				AB8D023F19B0DF7C007C55D3 /* Views */,
 				AB8D024019B0DF83007C55D3 /* Controllers */,
@@ -129,6 +147,8 @@
 			isa = PBXGroup;
 			children = (
 				AB8D022019B0DF47007C55D3 /* TapWater.xcdatamodeld */,
+				AB7CEFBC1A0C00880059E150 /* Drink.swift */,
+				AB7CEFBE1A0C00890059E150 /* User.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -219,6 +239,7 @@
 				TargetAttributes = {
 					AB8D021819B0DF47007C55D3 = {
 						CreatedOnToolsVersion = 6.0;
+						DevelopmentTeam = 9WKWX9PHR9;
 					};
 					AB8D022D19B0DF47007C55D3 = {
 						CreatedOnToolsVersion = 6.0;
@@ -277,7 +298,11 @@
 				AB8D021F19B0DF47007C55D3 /* AppDelegate.swift in Sources */,
 				AB8D022219B0DF47007C55D3 /* TapWater.xcdatamodeld in Sources */,
 				AB1A127E19C273D00054CBE7 /* DrinkHistoryViewController.swift in Sources */,
+				AB7CEFBF1A0C00890059E150 /* User.swift in Sources */,
+				AB1C9E2C1A17FE04005EF383 /* DateExtensions.swift in Sources */,
 				AB1A127C19C26D110054CBE7 /* NewDrinkViewController.swift in Sources */,
+				AB7CEFBD1A0C00880059E150 /* Drink.swift in Sources */,
+				AB7CEFB71A0BFC730059E150 /* CoreDataExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -395,10 +420,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = TapWater/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -407,10 +435,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = TapWater/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
