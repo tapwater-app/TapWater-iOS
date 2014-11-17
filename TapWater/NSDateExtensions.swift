@@ -8,8 +8,16 @@
 
 import Foundation
 
+/*
+* These NSDate extensions provide some app-specific convienence methods to the NSDate class
+*/
 extension NSDate {
-    
+
+    /*
+    * Load the data from a string that would be returned by the rails app
+    * @param string A string with the format "yyyy-MM-dd'T'HH:mm:ssZZZ"
+    * @return The date constructed from the string. If no date can be constructed this method returns nil
+    */
     class func fromRailsString(string: String) -> NSDate! {
         // Create a date formatter
         var dateFormatter: NSDateFormatter = NSDateFormatter()
@@ -22,6 +30,10 @@ extension NSDate {
         
     }
     
+    /*
+    * A string representation of the date that is suitable for posting to the rails app
+    * @return A string with the format "yyyy-MM-dd'T'HH:mm:ssZZZ"
+    */
     func toRailsString() -> String {
         // Create a date formatter
         var dateFormatter: NSDateFormatter = NSDateFormatter()
@@ -33,6 +45,10 @@ extension NSDate {
         return dateFormatter.stringFromDate(self)
     }
     
+    /*
+    * A human readable string representation of the date
+    * @return A string with the format "MMM dd, yyyy"
+    */
     func toHumanReadableString() -> String {
         // Create a date formatter
         var dateFormatter: NSDateFormatter = NSDateFormatter()
@@ -44,6 +60,11 @@ extension NSDate {
         
     }
     
+    /*
+    * A human readable string representation of the date.
+    * This method takes into acount the difference between this date and now
+    * @return A string with the format "n sec", "n min", "n hr", or "MMM dd, yyyy"
+    */
     func toHumanReadableIntervalString() -> String {
         if -1 * self.timeIntervalSinceNow < 60 {
             return NSString(format: "%i sec", -1 * Int(self.timeIntervalSinceNow))
@@ -56,6 +77,10 @@ extension NSDate {
         return self.toHumanReadableString()
     }
     
+    /*
+    * Determines whether or not the date falls between now and midnight the previous day
+    * @return A boolean that corresponds to whether or not the date occured today
+    */
     func isToday() -> Bool {
         // Create a date for 00:00:00 today
         let gregorianCalendar: NSCalendar = NSCalendar(calendarIdentifier: NSGregorianCalendar)!

@@ -9,14 +9,21 @@
 import Foundation
 import CoreData
 
+/*
+* The user class represents a user of the application
+*/
 @objc (User)
 class User: NSManagedObject {
 
-    @NSManaged var username: String
-    @NSManaged var deviceToken: String
-    @NSManaged var isCurrentUser: NSNumber
-    @NSManaged var drinks: NSSet
+    @NSManaged var username: String        // The user's username
+    @NSManaged var deviceToken: String     // The last device token from the user's most recent session
+    @NSManaged var isCurrentUser: NSNumber // A boolean for whether or not the user is the user that is currently authenticated
+    @NSManaged var drinks: NSSet           // The user's drinks
     
+    /*
+    * Loads the current user
+    * @return The user that is currently authenticated
+    */
     class func currentUser() -> User {
         // Create a query to find the current user
         var fetchRequest: NSFetchRequest = NSFetchRequest(entityName: "User")
@@ -48,9 +55,13 @@ class User: NSManagedObject {
         }
     }
     
+    /*
+    * Loads the number of drinks the user has had today
+    * @return An int whose value corresponds to the number of drinks the user has had today
+    */
     func drinksToday() -> Int {
         // Load the users drinks from today
-        let drinks: [Drink] = Drink.drinksForUser(User.currentUser()).filter({ (drink: Drink) -> Bool in
+        let drinks: [Drink] = Drink.drinksForUser(self).filter({ (drink: Drink) -> Bool in
             return drink.drinkDate.isToday()
         })
         
@@ -58,9 +69,13 @@ class User: NSManagedObject {
         return drinks.count
     }
     
+    /*
+    * Returns the date of the last drink the user had
+    * @return The date of the user's last drink. This method returns nil if the user has no drinks.
+    */
     func lastDrinkDate() -> NSDate? {
         // Load the user's drinks
-        let drinks: [Drink] = Drink.drinksForUser(User.currentUser()).filter({ (drink: Drink) -> Bool in
+        let drinks: [Drink] = Drink.drinksForUser(self).filter({ (drink: Drink) -> Bool in
             return drink.drinkDate.isToday()
         })
         
