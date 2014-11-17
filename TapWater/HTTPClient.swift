@@ -56,7 +56,7 @@ class HTTPClient: AFHTTPRequestOperationManager {
     * Authenticates an existing user
     * @param username The user's username
     * @param password The user's password
-    * @param success The block to be executed when the user is created
+    * @param success The block to be executed when the user is authenticated
     * @param failure The block to be executed if the user is not created
     */
     func authenticateUser(username: String, password: String, success: (response: AnyObject?) -> Void, failure: (response: AnyObject?, error: NSError?) -> Void) {

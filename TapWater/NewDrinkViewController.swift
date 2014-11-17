@@ -94,6 +94,9 @@ class NewDrinkViewController: UIViewController {
         self.drinkTimerLabel.text = NSString(format: "%02d:%02d:%02d", hours, minutes, seconds)
     }
     
+    /*
+    * This method updates the drink counter.
+    */
     func updateDrinkCounter() {
         self.drinkCounterLabel.text = NSString(format: "Drinks Today: %02d", User.currentUser().drinksToday())
     }
